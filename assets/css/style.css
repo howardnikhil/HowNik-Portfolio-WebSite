@@ -334,7 +334,6 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
-  border-radius: 50%;
 }
 
 .info-content .name {
@@ -1031,6 +1030,9 @@ main {
 
 
 
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
 
 .blog-posts { margin-bottom: 10px; }
 
@@ -1116,7 +1118,9 @@ main {
 
 
 
-
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
 
 .mapbox {
   position: relative;
@@ -1231,7 +1235,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @media (min-width: 450px) {
 
-  
+  /**
+   * client
+   */
+
+  .clients-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1463,8 +1471,17 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  
-  
+  /* clients */
+
+  .clients-list {
+    gap: 50px;
+    margin: 0 -30px;
+    padding: 45px;
+    scroll-padding-inline: 45px;
+  }
+
+  .clients-item { min-width: calc(33.33% - 35px); }
+
 
 
   /**
@@ -1497,7 +1514,31 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
- 
+  /**
+   * #CONTACT
+   */
+
+  .mapbox {
+    height: 380px;
+    border-radius: 18px;
+  }
+
+  .input-wrapper {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form-input { padding: 15px 20px; }
+
+  textarea.form-input { margin-bottom: 30px; }
+
+  .form-btn {
+    --fs-6: 16px;
+    padding: 16px 20px;
+  }
+
+  .form-btn ion-icon { font-size: 18px; }
+
 }
 
 
@@ -1587,7 +1628,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  
+  /**
+   * CONTACT
+   */
+
+  .input-wrapper { grid-template-columns: 1fr 1fr; }
+
+  .form-btn {
+    width: max-content;
+    margin-left: auto;
+  }
   
 }
 
@@ -1684,7 +1734,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  
+  /* clients */
+
+  .clients-item { min-width: calc(25% - 38px); }
 
 
 
