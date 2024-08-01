@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyright 2024 @howardnikhil
  */
 
 
@@ -1329,11 +1329,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 210px;
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 684px; }
 
   .sidebar-info { gap: 25px; }
 
