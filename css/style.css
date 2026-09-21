@@ -316,6 +316,48 @@ ul, ol {
   transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
+.brand-avatar {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-cyan);
+  background-color: var(--bg-elevated);
+  box-shadow: 0 0 12px var(--shadow-accent);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.brand-avatar-status {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-emerald);
+  border: 1.5px solid var(--bg-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-emerald);
+}
+
+.brand-link:hover .brand-avatar {
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
+  border-color: #ffffff;
+}
+
 .brand-link:hover .brand-monogram {
   transform: translateY(-1px);
   border-color: var(--accent-cyan);
@@ -705,8 +747,8 @@ ul, ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  filter: contrast(1.04) brightness(0.96);
+  object-position: center 12%;
+  filter: contrast(1.02) brightness(0.98);
   transition: transform var(--transition-slow), filter var(--transition-slow);
 }
 
