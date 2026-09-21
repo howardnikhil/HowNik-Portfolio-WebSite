@@ -1,0 +1,328 @@
+/* ==========================================================================
+   HOWNIK.IN — RESPONSIVE DESIGN & ADAPTIVE STYLESHEET
+   Ensures flawless aesthetics across Desktop, Laptop, Tablet, & Mobile viewports
+   ========================================================================== */
+
+/* --- LARGE SCREENS & COMPACT DESKTOPS (<= 1200px) --- */
+@media screen and (max-width: 1200px) {
+  :root {
+    --max-width: 1060px;
+  }
+
+  .process-pipeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .process-track {
+    display: none; /* Hide single continuous track when wrapped */
+  }
+
+  .project-card-featured {
+    grid-column: span 12;
+  }
+
+  .project-card-standard {
+    grid-column: span 6;
+  }
+
+  .prominent-experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- TABLETS LANDSCAPE (<= 992px) --- */
+@media screen and (max-width: 992px) {
+  .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Hero Section Stacking */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-visual-wrapper {
+    order: -1;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .technical-enclosure {
+    max-width: 360px;
+  }
+
+  .portrait-frame {
+    height: 380px;
+  }
+
+  /* Credibility Strip */
+  .credibility-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Work Grid */
+  .project-card-standard,
+  .project-card-wide {
+    grid-column: span 12;
+  }
+
+  /* Capabilities Grid */
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Recognition Grid */
+  .recognition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* --- TABLETS PORTRAIT & MOBILE (<= 768px) --- */
+@media screen and (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  /* Mobile Navigation Drawer */
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 28px;
+    gap: 22px;
+    border-bottom: 1px solid var(--border-medium);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-resume-btn {
+    display: none; /* Moved to mobile menu if needed or hero */
+  }
+
+  /* Hero Adjustments */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 24px);
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .hero-name {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+  }
+
+  .hero-positioning {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .hero-statement {
+    font-size: 1.18rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  /* Credibility Strip */
+  .credibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Process Pipeline on Mobile */
+  .process-pipeline {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .process-step {
+    padding: 18px;
+  }
+
+  /* Capabilities Grid */
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Recognition Grid */
+  .recognition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Secondary Experiences */
+  .secondary-experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Project Card Media */
+  .project-media-wrapper {
+    height: 220px;
+  }
+
+  .project-body {
+    padding: 20px;
+  }
+
+  .project-name {
+    font-size: 1.25rem;
+  }
+
+  /* Modal Adjustments */
+  .modal-dialog {
+    max-height: 95vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-scrollable-body {
+    padding: 20px;
+  }
+
+  .resume-doc-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-contacts-list {
+    text-align: left;
+  }
+
+  .contact-form-card {
+    padding: 24px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* --- SMALL PHONES (<= 480px) --- */
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .technical-enclosure {
+    max-width: 100%;
+  }
+
+  .portrait-frame {
+    height: 320px;
+  }
+
+  .credibility-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .enclosure-footer {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .exp-role {
+    font-size: 1.2rem;
+  }
+
+  .exp-company {
+    font-size: 0.92rem;
+  }
+
+  .more-work-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- PREFERS REDUCED MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .pulse-dot {
+    animation: none;
+  }
+
+  .hero-canvas {
+    display: none;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
