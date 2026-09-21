@@ -214,8 +214,8 @@ const PORTFOLIO_DATA = {
       },
       {
         role: "Co-Founder & CTO",
-        company: "Xtract AI Labs",
-        period: "Jul 2025 — Present",
+        company: "FirstDay AI",
+        period: "Jul 2025 — Jul 2026",
         type: "Product & AI",
         description: "Directing technical vision and architecture for FirstDayAI (firstdayai.in), an AI-driven career guidance and coaching platform.",
         bullets: [
@@ -228,7 +228,7 @@ const PORTFOLIO_DATA = {
       {
         role: "Founder & Robotics System Designer",
         company: "QuadroX Robotics",
-        period: "Mar 2025 — Present",
+        period: "Mar 2025 — Jul 2026",
         type: "Robotics Team / Lab",
         description: "Student-led robotics innovation team and personal lab exploring dynamic legged locomotion, control theory, and physical AI systems.",
         bullets: [
@@ -243,7 +243,7 @@ const PORTFOLIO_DATA = {
       {
         role: "Entrepreneurship Club President",
         org: "PSG iTech",
-        period: "Aug 2025 — Present",
+        period: "Aug 2025 — Jul 2026",
         desc: "Fostered university entrepreneurship culture through hands-on technical workshops, founder roundtables, and student innovation mentorship."
       },
       {
